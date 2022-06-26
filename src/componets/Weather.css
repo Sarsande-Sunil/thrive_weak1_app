@@ -1,18 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+body{
+    background:url("https://cdn.wallpapersafari.com/99/37/NQsAME.jpg");
+    font-family: 'Poppins', sans-serif;
+}
 .map{
-    width: 40%;
-    height: 300px;
-    border: 1px solid blue;
+    width: 50%;
+    height: 400px;
+    margin-right: 50px;
+    border: 5px solid hotpink;
+    margin-bottom: 50px;
+    border-radius: 15px;
 }
 
 .map > #dis1{
     width: 40%;
     height: 400px;
-     
 }
 .daily-card{
     width: 70%;
-    margin: auto;
     height: 72vh;
+    margin: auto;
     border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -40,6 +48,11 @@
     align-items: center;
 }
 .current-card{
-    border: 1px solid red;
-    margin-left: 50px;
+    padding: 5px 5px 5px 5px ;
+    margin-left: 250px;
+    border: 5px solid hotpink;
+    color: #FFFFFF;
+}
+.date-time h3{
+    color: white;
 }

@@ -59,6 +59,9 @@ function Weather() {
   const [morning8, setMorning8] = useState("morning");
   const [evening8, setEvening8] = useState("evening");
 
+  const [time, setTime] = useState()
+  const [date,setDate] = useState()
+  
   // fetch data
 
   const API_KEY = "440f8e07876056047055a662b864e6d1";
@@ -150,6 +153,61 @@ function Weather() {
     setEvening8(data.daily[7].feels_like.eve);
   }
 
+  // implementing current date and time
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  
+  setInterval(() => {
+    const time = new Date();
+    const month = time.getMonth();
+    const date = time.getDate();
+    const day = time.getDay();
+    const hour = time.getHours();
+    const hoursIn12HrFormat = hour >= 13 ? hour % 12 : hour;
+    const minutes = time.getMinutes();
+    const ampm = hour >= 12 ? "PM" : "AM";
+
+    const timeEl=
+      (hoursIn12HrFormat < 10 ? "0" + hoursIn12HrFormat : hoursIn12HrFormat) +
+      ":" +
+      (minutes < 10 ? "0" + minutes : minutes) +
+      " " +
+      `${ampm}`;
+    
+
+    const dateElL = days[day] + ", " + date + " " + months[month];
+    showDate(timeEl,dateElL);
+  }, 1000);
+
+
+  function showDate(timeEl, dateElL) {
+    setTime(timeEl);
+    setDate(dateElL);
+  }
+  console.log(time)
+  console.log(date)
+  
   return (
     <div>
       <input
@@ -162,6 +220,11 @@ function Weather() {
         <h1>
           {"👋👋" + "welcome to your favourite search" + " " + heading + "👋👋"}
         </h1>
+      </div>
+
+      <div className="date-time">
+        <h3>{time}</h3>
+        <h3>{date}</h3>
       </div>
 
       <div className="mid-container">
