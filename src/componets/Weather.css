@@ -10,12 +10,12 @@
      
 }
 .daily-card{
-    width: 80%;
+    width: 70%;
     margin: auto;
+    height: 72vh;
     border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -31,4 +31,14 @@
 .img-data img{
     width: 100px;
     height: 100px;
+}
+.mid-container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.current-card{
+    border: 1px solid red;
 }
