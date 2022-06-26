@@ -5,13 +5,17 @@ import moment from "moment";
 function Weather() {
   const textinput = useRef();
   const [weather, setWeather] = useState([]);
-  const [heading, setHeading] = useState("");
-  const [humidity, setHumidity] = useState("");
-  const [temp, setTemp] = useState("");
-  const [pressure, setPressure] = useState("");
-  const [sunrise, setSunrise] = useState("");
-  const [sunset, setSunset] = useState("");
-
+  const [heading, setHeading] = useState("🔍");
+  const [humidity, setHumidity] = useState("0");
+  const [temp, setTemp] = useState("0");
+  const [pressure, setPressure] = useState("0");
+  const [sunrise, setSunrise] = useState("00:00:00");
+  const [sunset, setSunset] = useState("00:00:00");
+  // state for day1 
+  const [day, setDay] = useState("day")
+  const [night, setNight] = useState("night")
+  const [morning,setMorning] = useState("morning")
+  const [evening, setEvening] = useState("evening");
   // fetch data
 
   const API_KEY = "440f8e07876056047055a662b864e6d1";
@@ -47,7 +51,7 @@ function Weather() {
     let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
     let res = await fetch(url);
     let data = await res.json();
-    console.log(data);
+    console.log("data", data);
     setWeather(data);
     setTemp(data.current.temp);
     setHumidity(data.current.humidity);
@@ -55,10 +59,24 @@ function Weather() {
     setSunrise(new Date(data.current.sunrise*1000).getHours());
     setSunset(new Date(data.current.sunset * 1000).getHours());
    
+    // data for day1 one only 
+    setDay(data.daily[0].feels_like.day);
+    setMorning(data.daily[0].feels_like.morn);
+    setNight(data.daily[0].feels_like.night);
+    setEvening(data.daily[0].feels_like.eve);
+
+    // console.log("d2", data.daily[1].feels_like.day);
+    // console.log("d3", data.daily[2].feels_like.day);
+    // console.log("d4", data.daily[3]);
+    // console.log("d5", data.daily[4]);
+    // console.log("d6", data.daily[5]);
+    // console.log("d7", data.daily[6]);
+    // console.log("d8", data.daily[7]);
+   
+
+
   }
-
- 
-
+  
   return (
     <div>
       <input
@@ -79,8 +97,21 @@ function Weather() {
         <h1>{"humidity" + humidity + "%"}</h1>
         <h1>{"temp" + temp + "kelvin"}</h1>
         <h1>{"pressure" + pressure + "pa"}</h1>
-        <h1>{"sunrise" + sunrise + "🌅" + "am"}</h1>
-        <h1>{"sunset" + sunset + "🌄" + "pm"}</h1>
+        <h1>{"sunrise" + "⌚" + sunrise + "am" + "🌅"}</h1>
+        <h1>{"sunset" + "⌚" + sunset + "pm" + "🌄"}</h1>
+      </div>
+      <div className="daily-card">
+        <div className="daily-handle">
+          <div className="img-data">
+            <img src="../componets/images/cloud-image.png" alt="" />
+          </div>
+          <div className="text-data">
+            <p>{"Day temperature" + day + "kelvin"}</p>
+            <p>{"Morning temperature." + morning + "kelvin"}</p>
+            <p>{" Evening temperature." + evening + "kelvin"}</p>
+            <p>{"Night temperature." + night + "kelvin"}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

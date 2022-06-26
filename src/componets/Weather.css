@@ -9,3 +9,13 @@
     height: 400px;
      
 }
+.daily-card{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+.daily-handle{
+    
+}
