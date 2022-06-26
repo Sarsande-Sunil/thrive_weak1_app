@@ -1,0 +1,11 @@
+.map{
+    width: 40%;
+    height: 300px;
+    border: 1px solid blue;
+}
+
+.map > #dis1{
+    width: 40%;
+    height: 400px;
+     
+}
