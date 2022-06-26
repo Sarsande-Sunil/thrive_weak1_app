@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Weather.css";
-import Moment from "react-moment";
-import moment from "moment";
+
 function Weather() {
   const textinput = useRef();
   const [weather, setWeather] = useState([]);
@@ -209,22 +208,27 @@ function Weather() {
   console.log(date)
   
   return (
-    <div>
-      <input
-        ref={textinput}
-        type="text"
-        placeholder="search your favourite city here"
-      />
-      <button onClick={hanleInput}>Search</button>
+    <div className="body">
+      <div className="top-div">
+        <div className="input-button">
+          <input
+            ref={textinput}
+            type="text"
+            placeholder="search your favourite city here"
+          />
+          <button onClick={hanleInput} className="btn">
+            Search
+          </button>
+        </div>
+        <div className="date-time">
+          <h3>{time}</h3>
+          <h3>{date}</h3>
+        </div>
+      </div>
       <div className="heading">
         <h1>
           {"👋👋" + "welcome to your favourite search" + " " + heading + "👋👋"}
         </h1>
-      </div>
-
-      <div className="date-time">
-        <h3>{time}</h3>
-        <h3>{date}</h3>
       </div>
 
       <div className="mid-container">
@@ -250,10 +254,11 @@ function Weather() {
             />
           </div>
           <div className="text-data">
-            <p>{"Day temperature" + day + "kelvin"}</p>
-            <p>{"Morning temperature." + morning + "kelvin"}</p>
-            <p>{" Evening temperature." + evening + "kelvin"}</p>
-            <p>{"Night temperature." + night + "kelvin"}</p>
+            <h3 className="week-day">Sunday</h3>
+            <p>{day}</p>
+            <p>{morning}</p>
+            <p>{evening}</p>
+            <p>{night}</p>
           </div>
         </div>
         {/* day2 */}
@@ -265,10 +270,11 @@ function Weather() {
             />
           </div>
           <div className="text-data">
-            <p>{"Day temperature" + day2 + "kelvin"}</p>
-            <p>{"Morning temperature." + morning2 + "kelvin"}</p>
-            <p>{" Evening temperature." + evening2 + "kelvin"}</p>
-            <p>{"Night temperature." + night2 + "kelvin"}</p>
+            <h3 className="week-day">Monday</h3>
+            <p>{day2}</p>
+            <p>{morning2}</p>
+            <p>{evening2}</p>
+            <p>{night2}</p>
           </div>
         </div>
         {/* day3 */}
@@ -280,10 +286,11 @@ function Weather() {
             />
           </div>
           <div className="text-data">
-            <p>{"Day temperature" + day3 + "kelvin"}</p>
-            <p>{"Morning temperature." + morning3 + "kelvin"}</p>
-            <p>{" Evening temperature." + evening3 + "kelvin"}</p>
-            <p>{"Night temperature." + night3 + "kelvin"}</p>
+            <h3 className="week-day">Tuesday</h3>
+            <p>{day3}</p>
+            <p>{morning3}</p>
+            <p>{+evening3}</p>
+            <p>{night3}</p>
           </div>
         </div>
         {/* day4 */}
@@ -295,10 +302,11 @@ function Weather() {
             />
           </div>
           <div className="text-data">
-            <p>{"Day temperature" + day4 + "kelvin"}</p>
-            <p>{"Morning temperature." + morning4 + "kelvin"}</p>
-            <p>{" Evening temperature." + evening4 + "kelvin"}</p>
-            <p>{"Night temperature." + night4 + "kelvin"}</p>
+            <h3 className="week-day">Wednesday</h3>
+            <p>{day4}</p>
+            <p>{morning4}</p>
+            <p>{evening4}</p>
+            <p>{night4}</p>
           </div>
         </div>
         {/* day5 */}
@@ -310,10 +318,11 @@ function Weather() {
             />
           </div>
           <div className="text-data">
-            <p>{"Day temperature" + day5 + "kelvin"}</p>
-            <p>{"Morning temperature." + morning5 + "kelvin"}</p>
-            <p>{" Evening temperature." + evening5 + "kelvin"}</p>
-            <p>{"Night temperature." + night5 + "kelvin"}</p>
+            <h3 className="week-day">Thursday</h3>
+            <p>{day5}</p>
+            <p>{morning5}</p>
+            <p>{evening5}</p>
+            <p>{night5}</p>
           </div>
         </div>
 
@@ -326,10 +335,11 @@ function Weather() {
             />
           </div>
           <div className="text-data">
-            <p>{"Day temperature" + day6 + "kelvin"}</p>
-            <p>{"Morning temperature." + morning6 + "kelvin"}</p>
-            <p>{" Evening temperature." + evening6 + "kelvin"}</p>
-            <p>{"Night temperature." + night6 + "kelvin"}</p>
+            <h3 className="week-day">Friday</h3>
+            <p>{day6}</p>
+            <p>{morning6}</p>
+            <p>{evening6}</p>
+            <p>{night6}</p>
           </div>
         </div>
 
@@ -342,10 +352,11 @@ function Weather() {
             />
           </div>
           <div className="text-data">
-            <p>{"Day temperature" + day7 + "kelvin"}</p>
-            <p>{"Morning temperature." + morning7 + "kelvin"}</p>
-            <p>{" Evening temperature." + evening7 + "kelvin"}</p>
-            <p>{"Night temperature." + night7 + "kelvin"}</p>
+            <h3 className="week-day">Saturday</h3>
+            <p>{day7}</p>
+            <p>{morning7}</p>
+            <p>{evening7}</p>
+            <p>{night7}</p>
           </div>
         </div>
 
@@ -358,10 +369,11 @@ function Weather() {
             />
           </div>
           <div className="text-data">
-            <p>{"Day temperature" + day8 + "kelvin"}</p>
-            <p>{"Morning temperature." + morning8 + "kelvin"}</p>
-            <p>{" Evening temperature." + evening8 + "kelvin"}</p>
-            <p>{"Night temperature." + night8 + "kelvin"}</p>
+            <h3 className="week-day">Sunday</h3>
+            <p>{day8}</p>
+            <p>{morning8}</p>
+            <p>{evening8}</p>
+            <p>{night8}</p>
           </div>
         </div>
       </div>
