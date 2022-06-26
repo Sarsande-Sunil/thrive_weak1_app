@@ -103,7 +103,118 @@ function Weather() {
       <div className="daily-card">
         <div className="daily-handle">
           <div className="img-data">
-            <img src="../componets/images/cloud-image.png" alt="" />
+            <img
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              alt=""
+            />
+          </div>
+          <div className="text-data">
+            <p>{"Day temperature" + day + "kelvin"}</p>
+            <p>{"Morning temperature." + morning + "kelvin"}</p>
+            <p>{" Evening temperature." + evening + "kelvin"}</p>
+            <p>{"Night temperature." + night + "kelvin"}</p>
+          </div>
+        </div>
+        {/* day2 */}
+        <div className="daily-handle">
+          <div className="img-data">
+            <img
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              alt=""
+            />
+          </div>
+          <div className="text-data">
+            <p>{"Day temperature" + day + "kelvin"}</p>
+            <p>{"Morning temperature." + morning + "kelvin"}</p>
+            <p>{" Evening temperature." + evening + "kelvin"}</p>
+            <p>{"Night temperature." + night + "kelvin"}</p>
+          </div>
+        </div>
+        {/* day3 */}
+        <div className="daily-handle">
+          <div className="img-data">
+            <img
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              alt=""
+            />
+          </div>
+          <div className="text-data">
+            <p>{"Day temperature" + day + "kelvin"}</p>
+            <p>{"Morning temperature." + morning + "kelvin"}</p>
+            <p>{" Evening temperature." + evening + "kelvin"}</p>
+            <p>{"Night temperature." + night + "kelvin"}</p>
+          </div>
+        </div>
+        {/* day4 */}
+        <div className="daily-handle">
+          <div className="img-data">
+            <img
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              alt=""
+            />
+          </div>
+          <div className="text-data">
+            <p>{"Day temperature" + day + "kelvin"}</p>
+            <p>{"Morning temperature." + morning + "kelvin"}</p>
+            <p>{" Evening temperature." + evening + "kelvin"}</p>
+            <p>{"Night temperature." + night + "kelvin"}</p>
+          </div>
+        </div>
+
+        {/* day5 */}
+        <div className="daily-handle">
+          <div className="img-data">
+            <img
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              alt=""
+            />
+          </div>
+          <div className="text-data">
+            <p>{"Day temperature" + day + "kelvin"}</p>
+            <p>{"Morning temperature." + morning + "kelvin"}</p>
+            <p>{" Evening temperature." + evening + "kelvin"}</p>
+            <p>{"Night temperature." + night + "kelvin"}</p>
+          </div>
+        </div>
+
+        {/* day6 */}
+        <div className="daily-handle">
+          <div className="img-data">
+            <img
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              alt=""
+            />
+          </div>
+          <div className="text-data">
+            <p>{"Day temperature" + day + "kelvin"}</p>
+            <p>{"Morning temperature." + morning + "kelvin"}</p>
+            <p>{" Evening temperature." + evening + "kelvin"}</p>
+            <p>{"Night temperature." + night + "kelvin"}</p>
+          </div>
+        </div>
+
+        {/* day7 */}
+        <div className="daily-handle">
+          <div className="img-data">
+            <img
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              alt=""
+            />
+          </div>
+          <div className="text-data">
+            <p>{"Day temperature" + day + "kelvin"}</p>
+            <p>{"Morning temperature." + morning + "kelvin"}</p>
+            <p>{" Evening temperature." + evening + "kelvin"}</p>
+            <p>{"Night temperature." + night + "kelvin"}</p>
+          </div>
+        </div>
+        {/* day8 */}
+        <div className="daily-handle">
+          <div className="img-data">
+            <img
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              alt=""
+            />
           </div>
           <div className="text-data">
             <p>{"Day temperature" + day + "kelvin"}</p>

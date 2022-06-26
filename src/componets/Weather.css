@@ -10,12 +10,25 @@
      
 }
 .daily-card{
+    width: 80%;
+    margin: auto;
     border: 1px solid red;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
 }
 .daily-handle{
-    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    max-width: max-content;
+    max-height: max-content;
+}
+.img-data img{
+    width: 100px;
+    height: 100px;
 }
