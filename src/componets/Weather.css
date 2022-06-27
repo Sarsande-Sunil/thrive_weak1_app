@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+.body{
+    width: 99%;
+    margin: auto;
+    background:url("https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg?t=st=1656267785~exp=1656268385~hmac=44599abb19f56e09a4fb1b047d2dbcda4bd02fcef31e65debf09a4d767a8eab1&w=1060");
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    border-radius: 25px;
+    scroll-behavior: smooth;
+    cursor: pointer;
+    border: 5px solid hotpink;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+.top-div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.input-button{
+    margin-left: 450px;
+    margin-bottom: 20px;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    margin-top: 100px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: hotpink;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.btn{
+    padding: 5px;
+    margin: 5px;
+  font-size: 25px;
+  border-radius: 25px;
+  border: 5px solid aqua;
+  color: black;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.map{
+    width: 50%;
+    height: 400px;
+    margin-right: 120px;
+    border: 5px solid white;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.map > #dis1{
+    width: 40%;
+    height: 400px;
+}
+.daily-card{
+    width: 90%;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.daily-handle{
+    width: 150px;
+    height: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.week-day{
+    color: white;
+    font-size: 15px;
+}
+.img-data img{
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    border-radius: 35px;
+}
+.mid-container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.current-card{
+    padding: 5px 5px 5px 5px ;
+    margin-left: 150px;
+    border: 5px solid white;
+    color: #FFFFFF;
+    border-radius: 25px;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.date-time{
+    width: 10%;
+    height:15vh;
+    margin-top: 20px;
+    border: 5px solid white;
+    color: white;
+    margin-left: 140px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 0.5 ease;
+    cursor: pointer;
+}
+.heading{
+    color: white;
+    text-transform: capitalize;
+    line-height: 5px;
+    text-shadow: white;
+}
