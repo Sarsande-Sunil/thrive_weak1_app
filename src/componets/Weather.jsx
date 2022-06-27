@@ -247,7 +247,7 @@ function Weather() {
 
         {/* day4 */}
         <div className="daily-handle">
-          <h3 className="week-day">Sun</h3>
+          <h3 className="week-day">Wed</h3>
           <div className="text-data">
             <p>{morning4 + "°"}</p>
             <p>{evening4 + "°"}</p>
@@ -263,7 +263,7 @@ function Weather() {
 
         {/* day5 */}
         <div className="daily-handle">
-          <h3 className="week-day">Wed</h3>
+          <h3 className="week-day">Thu</h3>
           <div className="text-data">
             <p>{morning5 + "°"}</p>
             <p>{evening5 + "°"}</p>
@@ -279,7 +279,7 @@ function Weather() {
 
         {/* day6 */}
         <div className="daily-handle">
-          <h3 className="week-day">Thu</h3>
+          <h3 className="week-day">Fri</h3>
           <div className="text-data">
             <p>{morning6 + "°"}</p>
             <p>{evening6 + "°"}</p>
@@ -295,7 +295,7 @@ function Weather() {
 
         {/* day7 */}
         <div className="daily-handle">
-          <h3 className="week-day">Fri</h3>
+          <h3 className="week-day">Sat</h3>
           <div className="text-data">
             <p>{morning7 + "°"}</p>
             <p>{evening7 + "°"}</p>
@@ -311,7 +311,7 @@ function Weather() {
 
         {/* day8 */}
         <div className="daily-handle">
-          <h3 className="week-day">Sat</h3>
+          <h3 className="week-day">Sun</h3>
           <div className="text-data">
             <p>{morning8 + "°"}</p>
             <p>{evening8 + "°"}</p>
@@ -325,6 +325,35 @@ function Weather() {
           <h3 className="week-day">Clouds</h3>
         </div>
       </div>
+
+      <div className="temp-div">
+        <div className="temp-text">
+          <h1>{temp + "°C"}</h1>
+        </div>
+        <div className="temp-img">
+          <img
+            src="https://www.quillproject.net/resources/resources_collection_image/57/3145"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div className="pressure-humidity">
+        <div className="presure">
+          <p>Pressure</p>
+          <p>{pressure + "hpa"}</p>
+        </div>
+        <div className="humidity">
+          <p>Humidity</p>
+          <p>{humidity + "%"}</p>
+        </div>
+      </div>
+
+      <div className="map">
+        <div id="dis1"></div>
+      </div>
+
+      
     </div>
   );
 }

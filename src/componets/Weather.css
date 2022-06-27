@@ -56,3 +56,53 @@ border: 5px solid #54BAB9;
     justify-content: space-around;
     gap: 20px;
 }
+.week-day{
+    color:darkgray;
+}
+.temp-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.temp-text{
+    font-size: 30px;
+    color: black;
+    margin-left: 5px;
+}
+.temp-img img{
+    width:100px;
+    height: 100px;
+}
+
+.pressure-humidity{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.presure{
+    font-size: 25px;
+    color: darkgrey;
+}
+.humidity{
+    font-size: 25px;
+    color: darkgrey;
+}
+.map{
+    width: 99%;
+    height: 400px;
+    margin-right: 120px;
+    border: 5px solid white;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    margin-top: 20px;
+   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.map > #dis1{
+    width: 40%;
+    height: 400px;
+}
