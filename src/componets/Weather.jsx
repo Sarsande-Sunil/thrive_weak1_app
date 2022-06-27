@@ -362,6 +362,10 @@ function Weather() {
             alt=""
           />
         </div>
+        <div className="date-time">
+          <h3>{time}</h3>
+          <h3>{date}</h3>
+        </div>
       </div>
 
       <div className="chart-div">
@@ -391,6 +395,25 @@ function Weather() {
         <div className="humidity">
           <h5>Humidity</h5>
           <h5>{humidity + "%"}</h5>
+        </div>
+      </div>
+
+      <div className="pressure-humidity">
+        <div className="presure">
+          <h5>Sunrise</h5>
+          <h5>{sunrise + "am"}</h5>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
+            alt=""
+          />
+        </div>
+        <div className="humidity">
+          <h5>Sunset</h5>
+          <h5>{sunset + "pm"}</h5>
+          <img
+            src="https://icons-for-free.com/download-icon-sun+sunset+weather+icon-1320196636209475292_512.png"
+            alt=""
+          />
         </div>
       </div>
 

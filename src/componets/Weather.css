@@ -4,9 +4,11 @@
     max-width: 1000px;
     max-height: fit-content;
     margin: auto;
-    border: 1px solid grey;
+    border: 5px solid white;
     margin-top: 50px;
     border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
 }
 .top-div{
     display: flex;
@@ -92,11 +94,11 @@ border: 5px solid #54BAB9;
 }
 .presure{
     font-size: 25px;
-    color: black;
+   color:darkgray;
 }
 .humidity{
     font-size: 25px;
-    color: black;
+    color:darkgray;
 }
 .map{
     width: 99%;
@@ -111,4 +113,8 @@ border: 5px solid #54BAB9;
 .map > #dis1{
     width: 40%;
     height: 400px;
+}
+.date-time{
+    margin-left: 300px;
+   color:darkgray;
 }
