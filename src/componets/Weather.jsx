@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import "./Weather.css";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, registerables } from "chart.js";
-import { Chart } from "react-chartjs-2";
 ChartJS.register(...registerables);
 function Weather() {
   const textinput = useRef();
@@ -179,14 +178,23 @@ function Weather() {
 
   // chart implementation 
   const state = {
-    labels: ["Sun", "Mon", "Tue", "Wed", "Thu","Fri","Sat","Sun"],
+    labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     datasets: [
       {
-        label: "Temprature",
+        label: "Temprature of week °C",
         backgroundColor: "rgba(75,192,192,1)",
         borderColor: "rgba(0,0,0,1)",
         borderWidth: 2,
-        data: [morning,morning2,morning3,morning4,morning5,morning6,morning7,morning8],
+        data: [
+          morning,
+          morning2,
+          morning3,
+          morning4,
+          morning5,
+          morning6,
+          morning7,
+          morning8,
+        ],
       },
     ],
   };
