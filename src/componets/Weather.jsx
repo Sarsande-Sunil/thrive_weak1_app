@@ -10,52 +10,36 @@ function Weather() {
   const [sunrise, setSunrise] = useState("00:00:00");
   const [sunset, setSunset] = useState("00:00:00");
   // state for day1
-  const [day, setDay] = useState("day");
-  const [night, setNight] = useState("night");
-  const [morning, setMorning] = useState("morning");
-  const [evening, setEvening] = useState("evening");
+  const [morning, setMorning] = useState("25");
+  const [evening, setEvening] = useState("30");
 
   // state for day2
-  const [day2, setDay2] = useState("day");
-  const [night2, setNight2] = useState("night");
-  const [morning2, setMorning2] = useState("morning");
-  const [evening2, setEvening2] = useState("evening");
+  const [morning2, setMorning2] = useState("25");
+  const [evening2, setEvening2] = useState("30");
 
   // state for day3
-  const [day3, setDay3] = useState("day");
-  const [night3, setNight3] = useState("night");
-  const [morning3, setMorning3] = useState("morning");
-  const [evening3, setEvening3] = useState("evening");
+  const [morning3, setMorning3] = useState("25");
+  const [evening3, setEvening3] = useState("30");
 
   // state for day 4
-  const [day4, setDay4] = useState("day");
-  const [night4, setNight4] = useState("night");
-  const [morning4, setMorning4] = useState("morning");
-  const [evening4, setEvening4] = useState("evening");
+  const [morning4, setMorning4] = useState("25");
+  const [evening4, setEvening4] = useState("30");
 
   // state for day 5
-  const [day5, setDay5] = useState("day");
-  const [night5, setNight5] = useState("night");
-  const [morning5, setMorning5] = useState("morning");
-  const [evening5, setEvening5] = useState("evening");
+  const [morning5, setMorning5] = useState("25");
+  const [evening5, setEvening5] = useState("30");
 
   // state for day 6
-  const [day6, setDay6] = useState("day");
-  const [night6, setNight6] = useState("night");
-  const [morning6, setMorning6] = useState("morning");
-  const [evening6, setEvening6] = useState("evening");
+  const [morning6, setMorning6] = useState("25");
+  const [evening6, setEvening6] = useState("30");
 
   // state for day 7
-  const [day7, setDay7] = useState("day");
-  const [night7, setNight7] = useState("night");
-  const [morning7, setMorning7] = useState("morning");
-  const [evening7, setEvening7] = useState("evening");
+  const [morning7, setMorning7] = useState("25");
+  const [evening7, setEvening7] = useState("30");
 
   // state for day 8
-  const [day8, setDay8] = useState("day");
-  const [night8, setNight8] = useState("night");
-  const [morning8, setMorning8] = useState("morning");
-  const [evening8, setEvening8] = useState("evening");
+  const [morning8, setMorning8] = useState("25");
+  const [evening8, setEvening8] = useState("30");
 
   const [time, setTime] = useState();
   const [date, setDate] = useState();
@@ -104,50 +88,35 @@ function Weather() {
     setSunset(new Date(data.current.sunset * 1000).getHours());
 
     // data for day1 one only
-    setDay(data.daily[0].feels_like.day);
+
     setMorning(data.daily[0].feels_like.morn);
-    setNight(data.daily[0].feels_like.night);
     setEvening(data.daily[0].feels_like.eve);
     // data for day2
-    setDay2(data.daily[1].feels_like.day);
     setMorning2(data.daily[1].feels_like.morn);
-    setNight2(data.daily[1].feels_like.night);
     setEvening2(data.daily[1].feels_like.eve);
 
     // data for day 3
-    setDay3(data.daily[2].feels_like.day);
     setMorning3(data.daily[2].feels_like.morn);
-    setNight3(data.daily[2].feels_like.night);
     setEvening3(data.daily[2].feels_like.eve);
 
     // data for day 4
-    setDay4(data.daily[3].feels_like.day);
     setMorning4(data.daily[3].feels_like.morn);
-    setNight4(data.daily[3].feels_like.night);
     setEvening4(data.daily[3].feels_like.eve);
 
     // data for day 5
-    setDay5(data.daily[4].feels_like.day);
     setMorning5(data.daily[4].feels_like.morn);
-    setNight5(data.daily[4].feels_like.night);
     setEvening5(data.daily[4].feels_like.eve);
 
     // data for day 6
-    setDay6(data.daily[5].feels_like.day);
     setMorning6(data.daily[5].feels_like.morn);
-    setNight6(data.daily[5].feels_like.night);
     setEvening6(data.daily[5].feels_like.eve);
 
     // data for day 7
-    setDay7(data.daily[6].feels_like.day);
     setMorning7(data.daily[6].feels_like.morn);
-    setNight7(data.daily[6].feels_like.night);
     setEvening7(data.daily[6].feels_like.eve);
 
     // data for day 8
-    setDay8(data.daily[7].feels_like.day);
     setMorning8(data.daily[7].feels_like.morn);
-    setNight8(data.daily[7].feels_like.night);
     setEvening8(data.daily[7].feels_like.eve);
   }
 
@@ -201,175 +170,159 @@ function Weather() {
     setTime(timeEl);
     setDate(dateElL);
   }
-  console.log(time);
-  console.log(date);
+  //console.log(time);
+  //console.log(date);
 
   return (
     <div className="body">
       <div className="top-div">
         <div className="input-button">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/447/447031.png"
+            alt=""
+            className="top-image"
+          />
           <input
             ref={textinput}
             type="text"
             placeholder="search your favourite city here"
           />
-          <button onClick={hanleInput} className="btn">
-            Search
-          </button>
-        </div>
-        <div className="date-time">
-          <h3>{time}</h3>
-          <h3>{date}</h3>
-        </div>
-      </div>
-      <div className="heading">
-      
-      </div>
-
-      <div className="mid-container">
-        <div className="current-card">
-          <h4>{ humidity }</h4>
-          <h4>{ temp }</h4>
-          <h4>{ pressure }</h4>
-          <h4>{sunrise}</h4>
-          <h4>{sunset}</h4>
-        </div>
-        <div class="map">
-          <div id="dis1"></div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/622/622669.png"
+            alt=""
+            className="top-image"
+            onClick={hanleInput}
+          />
         </div>
       </div>
 
       <div className="daily-card">
         {/* day1 */}
         <div className="daily-handle">
+          <h3 className="week-day">Sun</h3>
+          <div className="text-data">
+            <p>{morning + "°"}</p>
+            <p>{evening + "°"}</p>
+          </div>
           <div className="img-data">
             <img
-              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              src="https://www.quillproject.net/resources/resources_collection_image/57/3145"
               alt=""
             />
           </div>
-          <div className="text-data">
-            <h3 className="week-day">Sunday</h3>
-            <p>{day}</p>
-            <p>{morning}</p>
-            <p>{evening}</p>
-            <p>{night}</p>
-          </div>
+          <h3 className="week-day">Clouds</h3>
         </div>
+
         {/* day2 */}
         <div className="daily-handle">
+          <h3 className="week-day">Mon</h3>
+          <div className="text-data">
+            <p>{morning2 + "°"}</p>
+            <p>{evening2 + "°"}</p>
+          </div>
           <div className="img-data">
             <img
-              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              src="https://www.quillproject.net/resources/resources_collection_image/57/3145"
               alt=""
             />
           </div>
-          <div className="text-data">
-            <h3 className="week-day">Monday</h3>
-            <p>{day2}</p>
-            <p>{morning2}</p>
-            <p>{evening2}</p>
-            <p>{night2}</p>
-          </div>
+          <h3 className="week-day">Clouds</h3>
         </div>
+
         {/* day3 */}
         <div className="daily-handle">
+          <h3 className="week-day">Tue</h3>
+          <div className="text-data">
+            <p>{morning3 + "°"}</p>
+            <p>{evening3 + "°"}</p>
+          </div>
           <div className="img-data">
             <img
-              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              src="https://www.quillproject.net/resources/resources_collection_image/57/3145"
               alt=""
             />
           </div>
-          <div className="text-data">
-            <h3 className="week-day">Tuesday</h3>
-            <p>{day3}</p>
-            <p>{morning3}</p>
-            <p>{+evening3}</p>
-            <p>{night3}</p>
-          </div>
+          <h3 className="week-day">Clouds</h3>
         </div>
+
         {/* day4 */}
         <div className="daily-handle">
+          <h3 className="week-day">Sun</h3>
+          <div className="text-data">
+            <p>{morning4 + "°"}</p>
+            <p>{evening4 + "°"}</p>
+          </div>
           <div className="img-data">
             <img
-              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              src="https://www.quillproject.net/resources/resources_collection_image/57/3145"
               alt=""
             />
           </div>
-          <div className="text-data">
-            <h3 className="week-day">Wednesday</h3>
-            <p>{day4}</p>
-            <p>{morning4}</p>
-            <p>{evening4}</p>
-            <p>{night4}</p>
-          </div>
+          <h3 className="week-day">Clouds</h3>
         </div>
+
         {/* day5 */}
         <div className="daily-handle">
+          <h3 className="week-day">Wed</h3>
+          <div className="text-data">
+            <p>{morning5 + "°"}</p>
+            <p>{evening5 + "°"}</p>
+          </div>
           <div className="img-data">
             <img
-              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              src="https://www.quillproject.net/resources/resources_collection_image/57/3145"
               alt=""
             />
           </div>
-          <div className="text-data">
-            <h3 className="week-day">Thursday</h3>
-            <p>{day5}</p>
-            <p>{morning5}</p>
-            <p>{evening5}</p>
-            <p>{night5}</p>
-          </div>
+          <h3 className="week-day">Clouds</h3>
         </div>
 
         {/* day6 */}
         <div className="daily-handle">
+          <h3 className="week-day">Thu</h3>
+          <div className="text-data">
+            <p>{morning6 + "°"}</p>
+            <p>{evening6 + "°"}</p>
+          </div>
           <div className="img-data">
             <img
-              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              src="https://www.quillproject.net/resources/resources_collection_image/57/3145"
               alt=""
             />
           </div>
-          <div className="text-data">
-            <h3 className="week-day">Friday</h3>
-            <p>{day6}</p>
-            <p>{morning6}</p>
-            <p>{evening6}</p>
-            <p>{night6}</p>
-          </div>
+          <h3 className="week-day">Clouds</h3>
         </div>
 
         {/* day7 */}
         <div className="daily-handle">
+          <h3 className="week-day">Fri</h3>
+          <div className="text-data">
+            <p>{morning7 + "°"}</p>
+            <p>{evening7 + "°"}</p>
+          </div>
           <div className="img-data">
             <img
-              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              src="https://www.quillproject.net/resources/resources_collection_image/57/3145"
               alt=""
             />
           </div>
-          <div className="text-data">
-            <h3 className="week-day">Saturday</h3>
-            <p>{day7}</p>
-            <p>{morning7}</p>
-            <p>{evening7}</p>
-            <p>{night7}</p>
-          </div>
+          <h3 className="week-day">Clouds</h3>
         </div>
 
         {/* day8 */}
         <div className="daily-handle">
+          <h3 className="week-day">Sat</h3>
+          <div className="text-data">
+            <p>{morning8 + "°"}</p>
+            <p>{evening8 + "°"}</p>
+          </div>
           <div className="img-data">
             <img
-              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              src="https://www.quillproject.net/resources/resources_collection_image/57/3145"
               alt=""
             />
           </div>
-          <div className="text-data">
-            <h3 className="week-day">Sunday</h3>
-            <p>{day8}</p>
-            <p>{morning8}</p>
-            <p>{evening8}</p>
-            <p>{night8}</p>
-          </div>
+          <h3 className="week-day">Clouds</h3>
         </div>
       </div>
     </div>
