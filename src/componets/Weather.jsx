@@ -3,7 +3,7 @@ import "./Weather.css";
 
 function Weather() {
   const textinput = useRef();
-  const [setWeather] = useState([]);
+  const [weather, setWeather] = useState([]);
   const [humidity, setHumidity] = useState("0");
   const [temp, setTemp] = useState("0");
   const [pressure, setPressure] = useState("0");
@@ -96,6 +96,7 @@ function Weather() {
     let data = await res.json();
     console.log("data", data);
     setWeather(data);
+    console.log(weather)
     setTemp(data.current.temp);
     setHumidity(data.current.humidity);
     setPressure(data.current.pressure);
