@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import "./Weather.css";
-
+import { Bar } from "react-chartjs-2";
+import { Chart as ChartJS, registerables } from "chart.js";
+import { Chart } from "react-chartjs-2";
+ChartJS.register(...registerables);
 function Weather() {
   const textinput = useRef();
   const [weather, setWeather] = useState([]);
@@ -10,39 +13,40 @@ function Weather() {
   const [sunrise, setSunrise] = useState("00:00:00");
   const [sunset, setSunset] = useState("00:00:00");
   // state for day1
-  const [morning, setMorning] = useState("25");
-  const [evening, setEvening] = useState("30");
+  const [morning, setMorning] = useState(5);
+  const [evening, setEvening] = useState(3);
 
   // state for day2
-  const [morning2, setMorning2] = useState("25");
-  const [evening2, setEvening2] = useState("30");
+  const [morning2, setMorning2] = useState(2);
+  const [evening2, setEvening2] = useState(0);
 
   // state for day3
-  const [morning3, setMorning3] = useState("25");
-  const [evening3, setEvening3] = useState("30");
+  const [morning3, setMorning3] = useState(5);
+  const [evening3, setEvening3] = useState(0);
 
   // state for day 4
-  const [morning4, setMorning4] = useState("25");
-  const [evening4, setEvening4] = useState("30");
+  const [morning4, setMorning4] = useState(2);
+  const [evening4, setEvening4] = useState(0);
 
   // state for day 5
-  const [morning5, setMorning5] = useState("25");
-  const [evening5, setEvening5] = useState("30");
+  const [morning5, setMorning5] = useState(5);
+  const [evening5, setEvening5] = useState(3);
 
   // state for day 6
-  const [morning6, setMorning6] = useState("25");
-  const [evening6, setEvening6] = useState("30");
+  const [morning6, setMorning6] = useState(2);
+  const [evening6, setEvening6] = useState(0);
 
   // state for day 7
-  const [morning7, setMorning7] = useState("25");
-  const [evening7, setEvening7] = useState("30");
+  const [morning7, setMorning7] = useState(5);
+  const [evening7, setEvening7] = useState(3);
 
   // state for day 8
-  const [morning8, setMorning8] = useState("25");
-  const [evening8, setEvening8] = useState("30");
+  const [morning8, setMorning8] = useState(2);
+  const [evening8, setEvening8] = useState(3);
 
   const [time, setTime] = useState();
   const [date, setDate] = useState();
+
 
   // fetch data
 
@@ -172,6 +176,20 @@ function Weather() {
   }
   //console.log(time);
   //console.log(date);
+
+  // chart implementation 
+  const state = {
+    labels: ["Sun", "Mon", "Tue", "Wed", "Thu","Fri","Sat","Sun"],
+    datasets: [
+      {
+        label: "Temprature",
+        backgroundColor: "rgba(75,192,192,1)",
+        borderColor: "rgba(0,0,0,1)",
+        borderWidth: 2,
+        data: [morning,morning2,morning3,morning4,morning5,morning6,morning7,morning8],
+      },
+    ],
+  };
 
   return (
     <div className="body">
@@ -338,22 +356,39 @@ function Weather() {
         </div>
       </div>
 
+      <div className="chart-div">
+        <div>
+          <Bar
+            data={state}
+            options={{
+              title: {
+                display: true,
+                text: "Average Temprature per week",
+                fontSize: 20,
+              },
+              legend: {
+                display: true,
+                position: "right",
+              },
+            }}
+          />
+        </div>
+      </div>
+
       <div className="pressure-humidity">
         <div className="presure">
-          <p>Pressure</p>
-          <p>{pressure + "hpa"}</p>
+          <h5>Pressure</h5>
+          <h5>{pressure + "hpa"}</h5>
         </div>
         <div className="humidity">
-          <p>Humidity</p>
-          <p>{humidity + "%"}</p>
+          <h5>Humidity</h5>
+          <h5>{humidity + "%"}</h5>
         </div>
       </div>
 
       <div className="map">
         <div id="dis1"></div>
       </div>
-
-      
     </div>
   );
 }
