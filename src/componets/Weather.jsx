@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useRef, useState } from "react";
 import "./Weather.css";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, registerables } from "chart.js";
@@ -46,6 +46,7 @@ function Weather() {
   const [time, setTime] = useState();
   const [date, setDate] = useState();
 
+  
 
   // fetch data
 
